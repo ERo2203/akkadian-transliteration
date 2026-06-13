@@ -1,0 +1,103 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local Python environments and package caches
+.venv/
+.venv-*/
+venv/
+env/
+ENV/
+site-packages/
+pip-wheel-metadata/
+*.egg-info/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Training outputs, checkpoints, and model artifacts
+checkpoints/
+runs/
+wandb/
+lightning_logs/
+mlruns/
+outputs/
+artifacts/
+artifiacts/
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.pkl
+*.pickle
+
+# Raw/uncompressed datasets
+data/raw/*.csv
+data/raw/*.tsv
+data/raw/*.jsonl
+data/raw/*.xlsx
+data/*.csv
+!data/raw/*.csv.gz
+!data/raw/*.tsv.gz
+!data/raw/*.jsonl.gz
+
+# Large/generated data exports
+data/cache/
+data/processed/
+data/interim/
+data/tmp/
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Logs, MPS traces, and profiler output
+logs/
+*.log
+*.out
+*.err
+mps*.log
+*mps*.log
+torch_compile_debug/
+profiler/
+trace/
+traces/
+*.trace
+*.prof
+*.profraw
+
+# Generated dashboards and reports
+dashboard.html
+report.html
+reports/
+visualizations/
+
+# Build and distribution artifacts
+build/
+dist/
+.eggs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
