@@ -130,6 +130,7 @@ These metrics provide insight into both transliteration accuracy and decoder sta
 
 ## Repository Structure
 
+```text
 .
 ├── checkpoints/        # Saved model checkpoints
 ├── data/
@@ -139,7 +140,7 @@ These metrics provide insight into both transliteration accuracy and decoder sta
 ├── scripts/            # Training scripts
 ├── src/                # Model components
 └── README.md
-
+```
 ---
 
 ## Technology Stack
