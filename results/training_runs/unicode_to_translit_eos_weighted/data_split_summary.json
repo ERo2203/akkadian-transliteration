@@ -1,0 +1,8 @@
+{
+  "train_rows": 9000,
+  "val_rows": 500,
+  "test_rows": 500,
+  "src_vocab_size": 403,
+  "tgt_vocab_size": 71,
+  "device": "cpu"
+}

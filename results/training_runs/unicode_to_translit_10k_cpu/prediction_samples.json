@@ -1,0 +1,112 @@
+[
+  {
+    "ref": "{URU}-BAD₃-{d}-KASKAL.KUR-a-a-nun-a-bar-ša₂ a-na ba-ni-šu-a-a in-na-ta-mi-tu iq-ma-aʾ-da₃ ti ",
+    "pred": "a-na {URU}-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-na-a-a-a-a-na-na-a-a-a-a-na-a-a-n-a-a-a-n-n-na-a-na {",
+    "ref_len": "93",
+    "pred_len": "130",
+    "decode_limit": "131",
+    "eos_hit": "True",
+    "pred_steps": "130",
+    "cer": "0.9247",
+    "wer": "0.8333"
+  },
+  {
+    "ref": "lil₂-ta-ʾu-u ni {m}-GUN KU₃.BABBAR 2 ma na-KU₃.GI a-na {d}-15 ša šul-ki-gal {d}-KASKAL.GID₂ a-na LUGAL.MEŠ-te a-na EN.MEŠ-šu₂ GUR-ra ina di ni-šu₂ ka-ka-ma-la i-SANGA-ki-60 u₂-ma a-lu-ra-am-me u₂-la-a EDIN nu ša LUGAL be-ni-i-qab-bu-u ni tum PAP u ana ERIM.MEŠ ",
+    "pred": "{m}-{d}-AŠ-AŠ-AŠ a-na šu₂-na a šu₂-na šu₂-ni-na ša ša a ma ša a a a {m}-na ša {d}-na {d}-na šu-na ša ša {d}-na šu₂-na šu₂-na ša {d}-na šu₂-na šu-na ša {d}-na ša ",
+    "ref_len": "261",
+    "pred_len": "161",
+    "decode_limit": "234",
+    "eos_hit": "True",
+    "pred_steps": "161",
+    "cer": "0.7280",
+    "wer": "0.9444"
+  },
+  {
+    "ref": "ina šid-di im-ma gul-lul-hu-ru-dir zu-tap-ri-30 ga-a-ši-lib₃-SIG₃-mal-{m}-{d}-",
+    "pred": "{m}-{d}-MUAŠ-a-ši-ši-ši-{m}-{d}-{d}-MAŠ-a-a-ši-ši-ši-a-a-ši-ši-ši-ši-{di-{d}-ši-{d}-{d}-{d}-MAŠ-a-a-a-ši-a-ši-ši-ši-ši-",
+    "ref_len": "78",
+    "pred_len": "119",
+    "decode_limit": "120",
+    "eos_hit": "True",
+    "pred_steps": "119",
+    "cer": "1.1795",
+    "wer": "1.0000"
+  },
+  {
+    "ref": "i-qa-bi-ma-a-šar ku nu ENSI₂ ši-{m}-hi-im {d}-AG GUR a-ba-ṣa-bit IŠKUR ",
+    "pred": "{m}-{d}-a-a-a-a-a-a-a-a-a-a-nu ",
+    "ref_len": "71",
+    "pred_len": "31",
+    "decode_limit": "115",
+    "eos_hit": "True",
+    "pred_steps": "31",
+    "cer": "0.7606",
+    "wer": "1.0000"
+  },
+  {
+    "ref": "ina UGU {m}-ku-na-a-a {m}-ku ŠA₃.ru-ša₂ MAN ik-pu-u ni-ma a-šu-kut-liš u lu-a-na {m}-sa-si-i-ma-a-šu-ut SAG-EN-šu₂-nu u₂-da-ki-i an-ni-i-{GIŠ}-šap-ra-ma-a-šar il-ur-u ni u₂-sa-hi-ir-ṭur KUŠ₃ AMAR.UTU {m}-GIŠ ",
+    "pred": "{m}-a-na {d}-a-na {m}-na-na-na šu {m}-na i-na šu-na {ma-na šu-na {m}-a-na-na {m}-a-a-na-na-na {m}-a-a-na-a-a-na-a-a-na-na-na-na šu-a-a {m}-a-a-a-a-a-a-a-a-a-a-a-a-a-na-na-na-na šu-na-na {m}-na-na ma-na-na-na",
+    "ref_len": "208",
+    "pred_len": "207",
+    "decode_limit": "208",
+    "eos_hit": "True",
+    "pred_steps": "207",
+    "cer": "0.7067",
+    "wer": "1.0000"
+  },
+  {
+    "ref": "{m}-INANNA-NUMUN GADA {SIG₂}-ZA.še-ir-zi-kir SUHUŠ {GIŠ}-GU.ZA LUGAL-da-ri ",
+    "pred": "{m}-{GIŠ}-{GIŠ}-GIŠ}-GIN-GIŠ}-GIN-da-ba-ba-ba-ba-da-ba-ba-ba-ba-ba-ba-ba-ba-ba-",
+    "ref_len": "75",
+    "pred_len": "79",
+    "decode_limit": "80",
+    "eos_hit": "True",
+    "pred_steps": "79",
+    "cer": "0.8533",
+    "wer": "1.0000"
+  },
+  {
+    "ref": "IGI-GUR-bu-ti tan a-na ku ina qer-bi-lib₃-bi ia a-na EN-ia aq-ta-lul-rap-{d}-UTU-ša {KUR}-KUR AN TI ša₂ ša E₂ AD-šu₂ E₂ AD-šu₂ meh-e-muq a-te ",
+    "pred": "{d}-AGIN-ša₂ {d}-ša₂ {d}-ša₂ {d}-na {d}-na ša {d}-na ša {d}-na ša {d}-na {d}-na ša {d}-EN ša {d}-na ša {d}-na ša ša ša ša {d}-na {d}-na ša ša {d}-n",
+    "ref_len": "142",
+    "pred_len": "147",
+    "decode_limit": "148",
+    "eos_hit": "True",
+    "pred_steps": "147",
+    "cer": "0.7606",
+    "wer": "1.2381"
+  },
+  {
+    "ref": "IGI-et muš a-na šuk-ši-{m}-GIŠ ",
+    "pred": "{m}-{d}-MAŠ-na {m}-na ",
+    "ref_len": "31",
+    "pred_len": "22",
+    "decode_limit": "76",
+    "eos_hit": "True",
+    "pred_steps": "22",
+    "cer": "0.6774",
+    "wer": "1.0000"
+  },
+  {
+    "ref": "sat-li-KI ina muh-hi še-SIG₂.MEŠ ša LUGAL be-ni-iš-tum an-ni-ma a-8 qa-in-ti UDU.MEŠ ma-a-at-ta-ne₂-e-zib-ša₂ KU₃.GI ʾu-u₂-{UDU}-SISKUR.NA.MEŠ u₂-lu-a-na ši-{UDU}-SISKUR.NA.MEŠ {MUŠEN} ta-ta-al-ka-",
+    "pred": "{m}-a-a-na LUGAL ša ša₂-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-ta-t",
+    "ref_len": "197",
+    "pred_len": "193",
+    "decode_limit": "194",
+    "eos_hit": "True",
+    "pred_steps": "193",
+    "cer": "0.7665",
+    "wer": "0.9444"
+  },
+  {
+    "ref": "NU {m}-U.GUR kal-{d}-{m}-in-nab-2 tam-tar-hu-mut {m}-{d}-MUATI-EDIN ",
+    "pred": "{m}-{d}-{d}-MUAŠ-{d}-MUAŠ-{d}-MUAŠ-{d}-MUAŠ-GIN-ši-{m}-GIN-{d}-GIN-MUR ",
+    "ref_len": "68",
+    "pred_len": "71",
+    "decode_limit": "98",
+    "eos_hit": "True",
+    "pred_steps": "71",
+    "cer": "0.7794",
+    "wer": "1.0000"
+  }
+]

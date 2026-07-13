@@ -1,0 +1,8 @@
+{
+  "train_rows": 137166,
+  "val_rows": 7620,
+  "test_rows": 7620,
+  "src_vocab_size": 427,
+  "tgt_vocab_size": 71,
+  "device": "mps"
+}
