@@ -1,0 +1,12 @@
+{
+  "cer": 0.14983546904289793,
+  "wer": 0.43020987655416437,
+  "eos_rate": 1.0,
+  "forced_eos_rate": 0.328125,
+  "global_max_rate": 0.0,
+  "avg_pred_len": 124.96484375,
+  "avg_ref_len": 132.49609375,
+  "pred_ref_len_ratio": 0.9431587016126655,
+  "avg_max_char_run": 1.140625,
+  "avg_repeated_bigram_rate": 6.76267512499939e-05
+}
