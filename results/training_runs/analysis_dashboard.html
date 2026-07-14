@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>152k Unicode Transliteration Model Dashboard</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5e6b7e;
+      --line: #d7e0ea;
+      --panel: #f7fafc;
+      --panel-2: #eef5f4;
+      --accent: #0f766e;
+      --purple: #6d5bd0;
+      --warn: #a16207;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+    }
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+    header.top {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 { font-size: 32px; line-height: 1.15; }
+    h2 { font-size: 22px; margin: 28px 0 12px; }
+    .subtle { color: var(--muted); margin: 8px 0 0; max-width: 820px; line-height: 1.5; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin: 18px 0 26px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      background: var(--panel);
+      min-height: 112px;
+    }
+    .card div {
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 32px;
+    }
+    .card strong {
+      display: block;
+      font-size: 24px;
+      margin: 3px 0;
+    }
+    .card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .summary {
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      border-radius: 8px;
+      padding: 14px 16px;
+      line-height: 1.55;
+      margin: 12px 0 24px;
+    }
+    .chart {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0 18px;
+      overflow: hidden;
+    }
+    .chart-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .chart-head h3 { font-size: 16px; }
+    .chart-head span, .legend span { color: var(--muted); font-size: 12px; }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    svg line { stroke: var(--line); }
+    .grid line { stroke: #e7edf3; }
+    .grid text, .ticks text { fill: var(--muted); font-size: 11px; }
+    .legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .legend i {
+      display: inline-block;
+      width: 18px;
+      height: 3px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 24px;
+      font-size: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      background: #fbfdff;
+      font-weight: 650;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+    .two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+    }
+    pre {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 12px;
+      overflow: auto;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <h1>152k Unicode → Transliteration Model Dashboard</h1>
+    <p class="subtle">
+      Completed run: <code>unicode_to_translit_full_152k_d256</code>. Metrics are raw ratios internally;
+      this dashboard displays CER/WER as percentages for readability.
+    </p>
+  </header>
+
+  <section class="cards">
+    
+    <article class="card">
+      <div>Training rows</div>
+      <strong>137166</strong>
+      <span>Full dataset split</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Epochs completed</div>
+      <strong>20</strong>
+      <span>Best epoch 20</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Best validation loss</div>
+      <strong>0.3341</strong>
+      <span>Lower is better</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Final validation CER</div>
+      <strong>15.92%</strong>
+      <span>Epoch 20</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Final validation WER</div>
+      <strong>44.95%</strong>
+      <span>Epoch 20</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Final test CER</div>
+      <strong>14.98%</strong>
+      <span>Held-out test set</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Final test WER</div>
+      <strong>43.02%</strong>
+      <span>Held-out test set</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>EOS rate</div>
+      <strong>100.00%</strong>
+      <span>Runaway decoding controlled</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Model size</div>
+      <strong>d=256</strong>
+      <span>3 encoder / 3 decoder layers</span>
+    </article>
+    
+    
+    <article class="card">
+      <div>Training time</div>
+      <strong>34.7 h</strong>
+      <span>Summed epoch wall time</span>
+    </article>
+    
+  </section>
+
+  <section class="summary">
+    The completed 152k run improved validation loss from 1.0275
+    to 0.3341. Validation CER ended at 15.92%,
+    and the held-out test CER is 14.98%. EOS emission is stable at
+    100.00%, with no global max-length failures reported.
+  </section>
+
+  <h2>152k Training Curves</h2>
+  
+    <section class="chart">
+      <div class="chart-head">
+        <h3>Loss by Epoch</h3>
+        <span>loss</span>
+      </div>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Loss by Epoch">
+        <rect x="0" y="0" width="900" height="300" fill="white" />
+        <g class="grid"><line x1="54" y1="32.00" x2="880" y2="32.00" /><text x="46" y="36.00" text-anchor="end">1.642</text><line x1="54" y1="88.50" x2="880" y2="88.50" /><text x="46" y="92.50" text-anchor="end">1.291</text><line x1="54" y1="145.00" x2="880" y2="145.00" /><text x="46" y="149.00" text-anchor="end">0.940</text><line x1="54" y1="201.50" x2="880" y2="201.50" /><text x="46" y="205.50" text-anchor="end">0.588</text><line x1="54" y1="258.00" x2="880" y2="258.00" /><text x="46" y="262.00" text-anchor="end">0.237</text></g>
+        <line x1="54" y1="258" x2="880" y2="258" />
+        <line x1="54" y1="32" x2="54" y2="258" />
+        <polyline points="54.00,47.59 97.47,129.42 140.95,154.95 184.42,170.22 227.89,180.75 271.37,188.81 314.84,195.67 358.32,201.38 401.79,206.00 445.26,209.87 488.74,213.42 532.21,216.49 575.68,219.65 619.16,222.22 662.63,225.30 706.11,225.65 749.58,227.47 793.05,228.18 836.53,229.59 880.00,231.79" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round" /><polyline points="54.00,130.84 97.47,165.87 140.95,184.32 184.42,192.98 227.89,202.71 271.37,210.38 314.84,216.55 358.32,219.64 401.79,223.04 445.26,227.05 488.74,228.58 532.21,230.72 575.68,233.36 619.16,235.40 662.63,236.88 706.11,238.75 749.58,239.32 793.05,240.89 836.53,242.13 880.00,242.41" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round" />
+        <g class="ticks"><text x="54.00" y="286" text-anchor="middle">1</text><text x="97.47" y="286" text-anchor="middle">2</text><text x="184.42" y="286" text-anchor="middle">4</text><text x="271.37" y="286" text-anchor="middle">6</text><text x="358.32" y="286" text-anchor="middle">8</text><text x="445.26" y="286" text-anchor="middle">10</text><text x="532.21" y="286" text-anchor="middle">12</text><text x="619.16" y="286" text-anchor="middle">14</text><text x="706.11" y="286" text-anchor="middle">16</text><text x="793.05" y="286" text-anchor="middle">18</text><text x="880.00" y="286" text-anchor="middle">20</text></g>
+      </svg>
+      <div class="legend"><span><i style="background:#0f766e"></i>Train loss</span><span><i style="background:#8b5cf6"></i>Val loss</span></div>
+    </section>
+    
+  
+    <section class="chart">
+      <div class="chart-head">
+        <h3>Validation Error by Epoch</h3>
+        <span>raw ratio</span>
+      </div>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Validation Error by Epoch">
+        <rect x="0" y="0" width="900" height="300" fill="white" />
+        <g class="grid"><line x1="54" y1="32.00" x2="880" y2="32.00" /><text x="46" y="36.00" text-anchor="end">0.962</text><line x1="54" y1="88.50" x2="880" y2="88.50" /><text x="46" y="92.50" text-anchor="end">0.746</text><line x1="54" y1="145.00" x2="880" y2="145.00" /><text x="46" y="149.00" text-anchor="end">0.531</text><line x1="54" y1="201.50" x2="880" y2="201.50" /><text x="46" y="205.50" text-anchor="end">0.315</text><line x1="54" y1="258.00" x2="880" y2="258.00" /><text x="46" y="262.00" text-anchor="end">0.100</text></g>
+        <line x1="54" y1="258" x2="880" y2="258" />
+        <line x1="54" y1="32" x2="54" y2="258" />
+        <polyline points="54.00,142.72 97.47,162.81 140.95,175.87 184.42,183.82 227.89,195.62 271.37,200.67 314.84,210.25 358.32,212.76 401.79,216.15 445.26,223.01 488.74,221.44 532.21,226.09 575.68,231.30 619.16,234.62 662.63,236.26 706.11,239.44 749.58,239.99 793.05,240.99 836.53,242.11 880.00,242.41" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round" /><polyline points="54.00,47.59 97.47,63.19 140.95,75.36 184.42,83.07 227.89,96.03 271.37,99.39 314.84,111.14 358.32,117.45 401.79,119.52 445.26,132.47 488.74,129.84 532.21,134.05 575.68,143.63 619.16,151.78 662.63,158.15 706.11,158.19 749.58,162.70 793.05,164.77 836.53,162.37 880.00,166.33" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round" />
+        <g class="ticks"><text x="54.00" y="286" text-anchor="middle">1</text><text x="97.47" y="286" text-anchor="middle">2</text><text x="184.42" y="286" text-anchor="middle">4</text><text x="271.37" y="286" text-anchor="middle">6</text><text x="358.32" y="286" text-anchor="middle">8</text><text x="445.26" y="286" text-anchor="middle">10</text><text x="532.21" y="286" text-anchor="middle">12</text><text x="619.16" y="286" text-anchor="middle">14</text><text x="706.11" y="286" text-anchor="middle">16</text><text x="793.05" y="286" text-anchor="middle">18</text><text x="880.00" y="286" text-anchor="middle">20</text></g>
+      </svg>
+      <div class="legend"><span><i style="background:#0f766e"></i>Val CER</span><span><i style="background:#8b5cf6"></i>Val WER</span></div>
+    </section>
+    
+  
+    <section class="chart">
+      <div class="chart-head">
+        <h3>EOS Diagnostics</h3>
+        <span>rate</span>
+      </div>
+      <svg viewBox="0 0 900 300" role="img" aria-label="EOS Diagnostics">
+        <rect x="0" y="0" width="900" height="300" fill="white" />
+        <g class="grid"><line x1="54" y1="32.00" x2="880" y2="32.00" /><text x="46" y="36.00" text-anchor="end">1.065</text><line x1="54" y1="88.50" x2="880" y2="88.50" /><text x="46" y="92.50" text-anchor="end">0.829</text><line x1="54" y1="145.00" x2="880" y2="145.00" /><text x="46" y="149.00" text-anchor="end">0.594</text><line x1="54" y1="201.50" x2="880" y2="201.50" /><text x="46" y="205.50" text-anchor="end">0.358</text><line x1="54" y1="258.00" x2="880" y2="258.00" /><text x="46" y="262.00" text-anchor="end">0.123</text></g>
+        <line x1="54" y1="258" x2="880" y2="258" />
+        <line x1="54" y1="32" x2="54" y2="258" />
+        <polyline points="54.00,242.41 97.47,218.06 140.95,219.93 184.42,229.30 227.89,216.19 271.37,216.19 314.84,216.19 358.32,219.93 401.79,214.31 445.26,218.06 488.74,219.93 532.21,216.19 575.68,221.81 619.16,214.31 662.63,214.31 706.11,212.44 749.58,219.93 793.05,212.44 836.53,210.57 880.00,212.44" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round" /><polyline points="54.00,47.59 97.47,47.59 140.95,47.59 184.42,47.59 227.89,47.59 271.37,47.59 314.84,47.59 358.32,47.59 401.79,47.59 445.26,47.59 488.74,47.59 532.21,47.59 575.68,47.59 619.16,47.59 662.63,47.59 706.11,47.59 749.58,47.59 793.05,47.59 836.53,47.59 880.00,47.59" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round" />
+        <g class="ticks"><text x="54.00" y="286" text-anchor="middle">1</text><text x="97.47" y="286" text-anchor="middle">2</text><text x="184.42" y="286" text-anchor="middle">4</text><text x="271.37" y="286" text-anchor="middle">6</text><text x="358.32" y="286" text-anchor="middle">8</text><text x="445.26" y="286" text-anchor="middle">10</text><text x="532.21" y="286" text-anchor="middle">12</text><text x="619.16" y="286" text-anchor="middle">14</text><text x="706.11" y="286" text-anchor="middle">16</text><text x="793.05" y="286" text-anchor="middle">18</text><text x="880.00" y="286" text-anchor="middle">20</text></g>
+      </svg>
+      <div class="legend"><span><i style="background:#0f766e"></i>Forced EOS</span><span><i style="background:#8b5cf6"></i>EOS rate</span></div>
+    </section>
+    
+
+  <h2>Run Comparison</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Run</th><th>Train rows</th><th>d_model</th><th>Layers</th><th>Epochs</th>
+        <th>Best val loss</th><th>Final val CER</th><th>Final val WER</th>
+        <th>Test CER</th><th>Test WER</th><th>Test EOS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><code>unicode_to_translit</code></td><td>1800</td><td>128</td><td>2/2</td><td>2</td><td>2.2136</td><td>344.10%</td><td>100.00%</td><td>468.13%</td><td>100.00%</td><td>n/a</td></tr><tr><td><code>unicode_to_translit_10k_cpu</code></td><td>9000</td><td>128</td><td>2/2</td><td>5</td><td>1.8458</td><td>195.33%</td><td>187.37%</td><td>213.53%</td><td>160.29%</td><td>n/a</td></tr><tr><td><code>unicode_to_translit_eos_weighted</code></td><td>9000</td><td>128</td><td>2/2</td><td>6</td><td>1.9270</td><td>75.43%</td><td>105.24%</td><td>74.27%</td><td>105.98%</td><td>100.00%</td></tr><tr><td><code>unicode_to_translit_eos_weighted_30k</code></td><td>27000</td><td>128</td><td>2/2</td><td>8</td><td>1.3543</td><td>59.45%</td><td>94.84%</td><td>58.82%</td><td>94.01%</td><td>100.00%</td></tr><tr><td><code>unicode_to_translit_full_152k_d256</code></td><td>137166</td><td>256</td><td>3/3</td><td>20</td><td>0.3341</td><td>15.92%</td><td>44.95%</td><td>14.98%</td><td>43.02%</td><td>100.00%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>152k Epoch Details</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Epoch</th><th>Train loss</th><th>Val loss</th><th>Val CER</th>
+        <th>Val WER</th><th>EOS</th><th>Forced EOS</th>
+        <th>Avg pred len</th><th>Avg ref len</th><th>Seconds</th>
+      </tr>
+    </thead>
+    <tbody><tr><td>1</td><td>1.5450</td><td>1.0275</td><td>53.96%</td><td>90.26%</td><td>100.00%</td><td>18.75%</td><td>116.73</td><td>133.79</td><td>9359.9</td></tr>
+<tr><td>2</td><td>1.0364</td><td>0.8098</td><td>46.30%</td><td>84.31%</td><td>100.00%</td><td>28.91%</td><td>122.34</td><td>133.79</td><td>8878.6</td></tr>
+<tr><td>3</td><td>0.8777</td><td>0.6951</td><td>41.31%</td><td>79.66%</td><td>100.00%</td><td>28.12%</td><td>120.49</td><td>131.56</td><td>5611.3</td></tr>
+<tr><td>4</td><td>0.7828</td><td>0.6413</td><td>38.28%</td><td>76.72%</td><td>100.00%</td><td>24.22%</td><td>120.33</td><td>131.56</td><td>6590.0</td></tr>
+<tr><td>5</td><td>0.7173</td><td>0.5809</td><td>33.78%</td><td>71.77%</td><td>100.00%</td><td>29.69%</td><td>123.33</td><td>131.56</td><td>6655.1</td></tr>
+<tr><td>6</td><td>0.6673</td><td>0.5332</td><td>31.85%</td><td>70.49%</td><td>100.00%</td><td>29.69%</td><td>122.60</td><td>131.56</td><td>5932.6</td></tr>
+<tr><td>7</td><td>0.6246</td><td>0.4949</td><td>28.20%</td><td>66.01%</td><td>100.00%</td><td>29.69%</td><td>122.02</td><td>131.56</td><td>7707.8</td></tr>
+<tr><td>8</td><td>0.5891</td><td>0.4757</td><td>27.24%</td><td>63.60%</td><td>100.00%</td><td>28.12%</td><td>122.28</td><td>131.56</td><td>6352.9</td></tr>
+<tr><td>9</td><td>0.5604</td><td>0.4545</td><td>25.94%</td><td>62.81%</td><td>100.00%</td><td>30.47%</td><td>122.72</td><td>131.56</td><td>9669.4</td></tr>
+<tr><td>10</td><td>0.5364</td><td>0.4296</td><td>23.33%</td><td>57.87%</td><td>100.00%</td><td>28.91%</td><td>122.23</td><td>131.56</td><td>6976.9</td></tr>
+<tr><td>11</td><td>0.5143</td><td>0.4201</td><td>23.92%</td><td>58.88%</td><td>100.00%</td><td>28.12%</td><td>123.02</td><td>131.56</td><td>4648.4</td></tr>
+<tr><td>12</td><td>0.4952</td><td>0.4068</td><td>22.15%</td><td>57.27%</td><td>100.00%</td><td>29.69%</td><td>123.81</td><td>131.56</td><td>6047.9</td></tr>
+<tr><td>13</td><td>0.4755</td><td>0.3903</td><td>20.16%</td><td>53.61%</td><td>100.00%</td><td>27.34%</td><td>122.48</td><td>131.56</td><td>6265.5</td></tr>
+<tr><td>14</td><td>0.4596</td><td>0.3777</td><td>18.90%</td><td>50.50%</td><td>100.00%</td><td>30.47%</td><td>123.70</td><td>131.56</td><td>4448.4</td></tr>
+<tr><td>15</td><td>0.4404</td><td>0.3685</td><td>18.27%</td><td>48.07%</td><td>100.00%</td><td>30.47%</td><td>123.17</td><td>131.56</td><td>6595.0</td></tr>
+<tr><td>16</td><td>0.4383</td><td>0.3568</td><td>17.06%</td><td>48.06%</td><td>100.00%</td><td>31.25%</td><td>123.59</td><td>131.56</td><td>3922.4</td></tr>
+<tr><td>17</td><td>0.4270</td><td>0.3533</td><td>16.85%</td><td>46.34%</td><td>100.00%</td><td>28.12%</td><td>123.00</td><td>131.56</td><td>4226.7</td></tr>
+<tr><td>18</td><td>0.4225</td><td>0.3436</td><td>16.47%</td><td>45.55%</td><td>100.00%</td><td>31.25%</td><td>124.04</td><td>131.56</td><td>5917.2</td></tr>
+<tr><td>19</td><td>0.4138</td><td>0.3358</td><td>16.04%</td><td>46.46%</td><td>100.00%</td><td>32.03%</td><td>123.72</td><td>131.56</td><td>4889.8</td></tr>
+<tr><td>20</td><td>0.4001</td><td>0.3341</td><td>15.92%</td><td>44.95%</td><td>100.00%</td><td>31.25%</td><td>124.07</td><td>131.56</td><td>4291.6</td></tr></tbody>
+  </table>
+
+  <h2>Final Test Metrics</h2>
+  <pre>{
+  &quot;cer&quot;: 0.14983546904289793,
+  &quot;wer&quot;: 0.43020987655416437,
+  &quot;eos_rate&quot;: 1.0,
+  &quot;forced_eos_rate&quot;: 0.328125,
+  &quot;global_max_rate&quot;: 0.0,
+  &quot;avg_pred_len&quot;: 124.96484375,
+  &quot;avg_ref_len&quot;: 132.49609375,
+  &quot;pred_ref_len_ratio&quot;: 0.9431587016126655,
+  &quot;avg_max_char_run&quot;: 1.140625,
+  &quot;avg_repeated_bigram_rate&quot;: 6.76267512499939e-05
+}</pre>
+
+  <h2>152k Run Config</h2>
+  <section class="two">
+    <pre>{
+  &quot;data_path&quot;: &quot;data/raw/mtm24_transliterated.csv&quot;,
+  &quot;output_dir&quot;: &quot;checkpoints/unicode_to_translit_full_152k_d256&quot;,
+  &quot;seed&quot;: 42,
+  &quot;max_src_len&quot;: 200,
+  &quot;max_tgt_len&quot;: 300,
+  &quot;max_rows&quot;: 0,
+  &quot;val_size&quot;: 0.05,
+  &quot;test_size&quot;: 0.05,
+  &quot;batch_size&quot;: 16,
+  &quot;eval_batch_size&quot;: 16,
+  &quot;epochs&quot;: 20,
+  &quot;patience&quot;: 5,
+  &quot;min_delta&quot;: 0.0005,
+  &quot;d_model&quot;: 256,
+  &quot;nhead&quot;: 4,
+  &quot;encoder_layers&quot;: 3,
+  &quot;decoder_layers&quot;: 3,
+  &quot;dim_feedforward&quot;: 512,
+  &quot;dropout&quot;: 0.1,
+  &quot;lr&quot;: 0.0003,
+  &quot;weight_decay&quot;: 0.0001,
+  &quot;eos_loss_weight&quot;: 6.0,
+  &quot;label_smoothing&quot;: 0.02,
+  &quot;grad_clip&quot;: 1.0,
+  &quot;num_workers&quot;: 0,
+  &quot;decode_samples&quot;: 128,
+  &quot;decode_max_ratio&quot;: 2.2,
+  &quot;decode_max_extra&quot;: 40,
+  &quot;decode_min_len&quot;: 8,
+  &quot;show_predictions&quot;: 0,
+  &quot;eval_only&quot;: false,
+  &quot;resume&quot;: &quot;checkpoints/unicode_to_translit_full_152k_d256/last.pt&quot;,
+  &quot;device&quot;: &quot;mps&quot;
+}</pre>
+    <pre>{
+  &quot;train_rows&quot;: 137166,
+  &quot;val_rows&quot;: 7620,
+  &quot;test_rows&quot;: 7620,
+  &quot;src_vocab_size&quot;: 427,
+  &quot;tgt_vocab_size&quot;: 71,
+  &quot;device&quot;: &quot;mps&quot;
+}</pre>
+  </section>
+</main>
+</body>
+</html>
