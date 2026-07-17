@@ -45,6 +45,14 @@ Output
 LUGAL URI
 ```
 
+## Current Baseline Model Test Metrics: 
+
+CER: 0.1498
+WER: 0.4302
+EOS rate: 1.0
+Forced EOS rate: 0.3281
+
+
 ## Current Features
 
 * Character-level Transformer encoder-decoder
