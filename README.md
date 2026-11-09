@@ -201,5 +201,5 @@ Repository:
 https://github.com/ERo2203/akkadian-transliteration
 
 ---
-Data sourced from: ORACC Akkadian-English Parallel Corpus [https://www.kaggle.com/datasets/manwithacat/oracc-akkadian-english-parallel-corpus]
-                   MTM24 Akkadian Cuneiform Transliteration [https://www.kaggle.com/datasets/manwithacat/mtm24-akkadian-transliteration]
+Data sourced from: ORACC Akkadian-English Parallel Corpus [https://www.kaggle.com/datasets/manwithacat/oracc-akkadian-english-parallel-corpus] Licensed under [Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](https://creativecommons.org). 
+                   MTM24 Akkadian Cuneiform Transliteration [https://www.kaggle.com/datasets/manwithacat/mtm24-akkadian-transliteration] Licensed under [CC BY 4.0](https://creativecommons.org).
