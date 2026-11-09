@@ -201,4 +201,4 @@ Repository:
 https://github.com/ERo2203/akkadian-transliteration
 
 ---
-
+Data sourced from: ORACC Akkadian-English Parallel Corpus
